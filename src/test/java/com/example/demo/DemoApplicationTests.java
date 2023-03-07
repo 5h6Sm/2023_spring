@@ -25,5 +25,8 @@ class DemoApplicationTests {
 //		Person person = (Person) context.getBean(Person.class);
 		var person = (Person) context.getBean("helloMyPerson");
 		System.out.println(person);
+
+		var calculatorService = (MyCalculatorService) context.getBean(MyCalculatorService.class);
+		calculatorService.calcAdd(5, 5);
 	}
 }
